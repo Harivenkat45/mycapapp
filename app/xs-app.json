@@ -18,7 +18,7 @@
   {
    "source": "^/(.*)$",
    "authenticationType": "xsuaa",
-   "destination": "srv-api
+   "destination": "srv-api"
   }
  ],
  "logout": {

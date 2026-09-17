@@ -1,5 +1,5 @@
 {
- "xsappname": "MyFirtcappApp",
+ "xsappname": "MyFirstcappApp",
  "scopes": [
   {
    "name": "$XSAPPNAME.Display",

@@ -12,7 +12,7 @@ build-parameters:
         - npx cds build --production
 modules:
 ##this is our UI module added = fioriui+approuter
-  - name: MyFirtcappApp-ui
+  - name: MyFirstcappApp-ui
     type: nodejs
     path: app
     parameters:
