@@ -4,10 +4,10 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
 
     //Entity  - representation of an end point of data to perform CRUDQ tasks
     entity EmployeeSet @(restrict :[
-                                {grant : ['READ'], to: 'Viewer',
+                                {grant : ['READ'], to: 'Display',
                                     //row level security
                                     where :'bankName = $user.spiderman'},
-                                {grant : ['READ','WRITE', 'DELETE'], to: 'Editor'}
+                                {grant : ['READ','WRITE', 'DELETE'], to: 'Edit'}
                               ]) as projection on master.employee;
     entity ProductSet as projection on master.product;
     entity BusinessPartnerSet as projection on master.businesspartner;
@@ -17,10 +17,10 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
     //@readonly
     @Capabilities : { Deletable: false }
     entity PurchaseOrderSet @(
-                            //   restrict :[
-                            //     {grant : ['READ'], to: 'Viewer'},
-                            //     {grant : ['READ', 'WRITE', 'DELETE'], to: 'Editor'}
-                            //   ],
+                              restrict :[
+                                {grant : ['READ'], to: 'Display'},
+                                {grant : ['READ', 'WRITE', 'DELETE'], to: 'Edit'}
+                              ],
                             //   odata.draft.enabled: true,
                               Common.DefaultValuesFunction: 'getDeafultValue') as projection on transaction.purchaseorder{
         *,
