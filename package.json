@@ -32,7 +32,7 @@
             "harish": {
               "password": "Welcome1",
               "roles": [
-                "Editor"
+                "Edit"
               ],
               "attr": {
                 "spiderman": ["My Bank of London"]
@@ -41,7 +41,7 @@
             "ananya": {
               "password": "ananya",
               "roles": [
-                "Editor"
+                "Edit"
               ]
             }
           }

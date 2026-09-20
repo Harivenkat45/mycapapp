@@ -21,7 +21,7 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
                                 {grant : ['READ'], to: 'Display'},
                                 {grant : ['READ', 'WRITE', 'DELETE'], to: 'Edit'}
                               ],
-                            //   odata.draft.enabled: true,
+                              odata.draft.enabled: true,
                               Common.DefaultValuesFunction: 'getDeafultValue') as projection on transaction.purchaseorder{
         *,
         //CDS Expression language
