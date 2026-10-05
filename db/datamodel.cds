@@ -91,7 +91,7 @@ context transaction {
         LIFECYCLE_STATUS: String(1) @(title: '{i18n>OVERALL_STATUS}');
         OVERALL_STATUS: String(1) @(title: '{i18n>OVERALL_STATUS}');
         NOTE: String(100) @(title: '{i18n>NOTE}');
-        Items: Composition of  many poitems on Items.PARENT_KEY = $self @(title: '{i18n>PO_ITEM_KEY}');
+        Items: Composition of many poitems on Items.PARENT_KEY = $self @(title: '{i18n>PO_ITEM_KEY}');
     }
 
     entity poitems: common.Amount, cuid{

@@ -39,7 +39,6 @@
    "name": "Editor",
    "description": "Edit, delete PO and Employees",
    "scope-references": [
-    "$XSAPPNAME.Display",
     "$XSAPPNAME.Edit",
     "$XSAPPNAME.Delete"
    ]
